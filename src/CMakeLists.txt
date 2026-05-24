@@ -201,7 +201,7 @@ ecm_generate_qdoc(KF6Attica attica.qdocconf)
 
 # Install package config file
 if(NOT WIN32)
-    ecm_generate_pkgconfig_file(BASE_NAME KF6Attica
+	ecm_generate_pkgconfig_file(BASE_NAME SonicFrameworksOpenCollab
         LIB_NAME KF6Attica
         INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/Attica
         DEPS Qt6Core Qt6Network

@@ -12,9 +12,9 @@ portingAid: false
 deprecated: false
 release: true
 libraries:
-    - cmake: "KF6::Attica"
+    - cmake: "SonicFrameworksOpenCollab"
       license: LGPL-2.1-only OR LGPL-3.0-only
-cmakename: KF6Attica
+cmakename: SonicFrameworksOpenCollab
 
 public_lib: true
 group: Frameworks

@@ -45,7 +45,7 @@ set(attica_version_header "${CMAKE_CURRENT_BINARY_DIR}/src/attica_version.h")
 ecm_setup_version(PROJECT
     VARIABLE_PREFIX ATTICA
     VERSION_HEADER "${attica_version_header}"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6AtticaConfigVersion.cmake"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksOpenCollabConfigVersion.cmake"
     SOVERSION 6)
 
 # Dependencies
@@ -72,24 +72,24 @@ if (BUILD_TESTING)
 endif ()
 
 # Create a Config.cmake and a ConfigVersion.cmake file and install them
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6Attica")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/SonicFrameworksOpenCollab")
 
 # Create the CMake Config files
 configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KF6AtticaConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF6AtticaConfig.cmake"
+	"${CMAKE_CURRENT_SOURCE_DIR}/SonicFrameworksOpenCollabConfig.cmake.in"
+	"${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksOpenCollabConfig.cmake"
     INSTALL_DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
 )
 
 install(FILES
-            "${CMAKE_CURRENT_BINARY_DIR}/KF6AtticaConfig.cmake"
-            "${CMAKE_CURRENT_BINARY_DIR}/KF6AtticaConfigVersion.cmake"
+	"${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksOpenCollabConfig.cmake"
+	"${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksOpenCollabConfigVersion.cmake"
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel)
 
 install(EXPORT KF6AtticaTargets
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        FILE KF6AtticaTargets.cmake
+	FILE SonicFrameworksOpenCollabTargets.cmake
         NAMESPACE KF6::)
 
 install(FILES "${attica_version_header}"
